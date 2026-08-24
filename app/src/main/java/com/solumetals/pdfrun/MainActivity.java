@@ -178,8 +178,14 @@ public class MainActivity extends Activity {
         progressParams.setMargins(0, dp(8), 0, 0);
         body.addView(scannerProgress, progressParams);
 
-        loadButton.setOnClickListener(view -> chooseFileType());
-        scanButton.setOnClickListener(view -> openDocumentScanner());
+        loadButton.setOnClickListener(view -> {
+            resetDocument();
+            chooseFileType();
+        });
+        scanButton.setOnClickListener(view -> {
+            resetDocument();
+            openDocumentScanner();
+        });
 
         documentPanel = new LinearLayout(this);
         documentPanel.setOrientation(LinearLayout.VERTICAL);
@@ -224,6 +230,13 @@ public class MainActivity extends Activity {
         documentPanel.addView(shareButton, shareParams);
 
         setContentView(root);
+    }
+
+    private void resetDocument() {
+        pages.clear();
+        lastPdf = null;
+        fileName.setText("PDF-Run");
+        renderPages();
     }
 
     private void chooseFileType() {
