@@ -32,10 +32,10 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.mlkit.vision.documentscanner.GmsDocumentScanner;
-import com.google.android.gms.mlkit.vision.documentscanner.GmsDocumentScannerOptions;
-import com.google.android.gms.mlkit.vision.documentscanner.GmsDocumentScanning;
-import com.google.android.gms.mlkit.vision.documentscanner.GmsDocumentScanningResult;
+import com.google.mlkit.vision.documentscanner.GmsDocumentScanner;
+import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions;
+import com.google.mlkit.vision.documentscanner.GmsDocumentScanning;
+import com.google.mlkit.vision.documentscanner.GmsDocumentScanningResult;
 
 import java.io.BufferedReader;
 import java.io.File;
